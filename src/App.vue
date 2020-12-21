@@ -1,16 +1,23 @@
 <template>
   <div>
-    <h1>Initial Portfolio</h1>
+    <Navbar />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import Navbar from '@/components/Navbar.vue';
 
 export default defineComponent({
   name: 'App',
-  components: {},
+  components: {
+    Navbar,
+  },
 });
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+#app {
+  height: 200vh;
+}
+</style>
