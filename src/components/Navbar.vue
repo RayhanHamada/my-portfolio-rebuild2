@@ -1,12 +1,14 @@
 <template>
   <nav
-    class="fixed w-full flex flex-row justify-between bg-my-dark opacity-75 py-4 pl-16 border-b-2 border-my-red"
+    class="fixed w-full flex flex-row justify-between bg-my-dark opacity-75 py-4 pl-2 md:pl-16 lg:pl-16 xl:pl-16 sm:pl-4 border-b-2 border-my-red"
   >
-    <p class="font-extralight text-my-red text-xl">
+    <p
+      class="font-normal lg:font-thin xl:font-thin text-my-red sm:text-sm md:text-sm lg:text-xl xl:text-xl"
+    >
       <b>Mocchapine</b> | Rayhan Hamada
     </p>
     <div class="space-x-5">
-      <switch-button />
+      <switch-button class="sm:invisible" />
     </div>
   </nav>
 </template>
