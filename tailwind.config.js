@@ -13,11 +13,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'my-dark': '#303030',
+        'my-dark-darker': '#303030',
         'my-red': '#e41749',
         'my-light': '#f0f0f0',
         'my-light-darker': '#e0e0e0',
-        'my-dark-darker': '#404040',
+        'my-dark': '#404040',
       },
     },
   },
