@@ -1,5 +1,10 @@
 <template>
-  <label for="toggle" class="text-xs text-white">Dark Theme</label>
+  <label
+    for="toggle"
+    class="text-xs"
+    :class="darkTheme ? 'text-white' : 'text-black'"
+    >Dark Theme</label
+  >
   <div
     class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in"
   >
@@ -8,7 +13,7 @@
       name="toggle"
       id="toggle"
       class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"
-      v-model="shouldDark"
+      v-model="darkTheme"
     />
     <label
       for="toggle"
@@ -19,15 +24,17 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { useTheme } from '@/store/useTheme';
 
 export default defineComponent({
   name: 'SwitchButton',
-  data() {
+  setup() {
+    const { darkTheme } = useTheme();
+
     return {
-      shouldDark: true,
+      darkTheme,
     };
   },
-  components: {},
 });
 </script>
 
@@ -35,11 +42,11 @@ export default defineComponent({
 .toggle-checkbox:checked {
   @apply: right-0 border-green-400;
   right: 0;
-  border-color: #68d391;
+  border-color: black;
 }
 
 .toggle-checkbox:checked + .toggle-label {
   @apply: bg-green-400;
-  background-color: #68d391;
+  background-color: black;
 }
 </style>
