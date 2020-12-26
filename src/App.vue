@@ -12,6 +12,7 @@ import Intro from '@/components/Intro.vue';
 
 export default defineComponent({
   name: 'App',
+
   components: {
     Navbar,
     Intro,
