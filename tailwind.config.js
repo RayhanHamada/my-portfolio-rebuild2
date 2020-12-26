@@ -8,7 +8,7 @@
  * @type {TailwindConfig}
  */
 module.exports = {
-  purge: process.env.NODE_ENV === 'production' ? ['components/**/*.vue'] : [],
+  // purge: process.env.NODE_ENV === 'production' ? ['./src/**/*.{ts,js,vue}'] : [],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
