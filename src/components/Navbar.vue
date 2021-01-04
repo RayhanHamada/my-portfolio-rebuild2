@@ -22,6 +22,7 @@ export default defineComponent({
   name: 'Navbar',
   setup() {
     const { darkTheme } = useTheme();
+
     return {
       darkTheme,
     };
