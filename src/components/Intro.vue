@@ -9,7 +9,7 @@
     />
     <div class="flex flex-col justify-start items-center md:items-start">
       <p class="text-my-red text-2xl md:text-4xl">Wello There !</p>
-      <p class="text-my-red text-sm md:text-base self-start">
+      <p class="text-my-red text-sm md:text-base">
         My name is Muhammad Rayhan Hamada Budiman.
       </p>
       <p class="text-my-red text-sm md:text-base">
@@ -31,9 +31,9 @@ export default defineComponent({
   setup() {
     const { profilePic, fetchProfilePic } = useGithub();
 
-    onMounted(() => {
-      fetchProfilePic();
-    });
+    // onMounted(() => {
+    //   fetchProfilePic();
+    // });
 
     return {
       profilePic,

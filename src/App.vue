@@ -1,7 +1,8 @@
 <template>
   <Navbar />
   <div class="h-full pt-20" :class="darkTheme ? 'bg-my-dark' : 'bg-my-light'">
-    <intro />
+    <Intro />
+    <Projects />
   </div>
 </template>
 
@@ -9,6 +10,7 @@
 import { defineComponent } from 'vue';
 import Navbar from '@/components/Navbar.vue';
 import Intro from '@/components/Intro.vue';
+import Projects from '@/components/Projects.vue';
 
 import { useTheme } from '@/store/useTheme';
 
@@ -23,6 +25,7 @@ export default defineComponent({
   components: {
     Navbar,
     Intro,
+    Projects,
   },
 });
 </script>
