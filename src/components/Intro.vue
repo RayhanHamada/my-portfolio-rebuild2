@@ -31,9 +31,9 @@ export default defineComponent({
   setup() {
     const { profilePic, fetchProfilePic } = useGithub();
 
-    // onMounted(() => {
-    //   fetchProfilePic();
-    // });
+    onMounted(() => {
+      fetchProfilePic();
+    });
 
     return {
       profilePic,

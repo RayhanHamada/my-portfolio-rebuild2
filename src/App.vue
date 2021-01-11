@@ -8,6 +8,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+
 import Navbar from '@/components/Navbar.vue';
 import Intro from '@/components/Intro.vue';
 import Projects from '@/components/Projects.vue';
@@ -32,6 +33,6 @@ export default defineComponent({
 
 <style lang="scss">
 #app {
-  height: 120vh;
+  height: 100vh;
 }
 </style>

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 import { Octokit } from '@octokit/rest';
 import { ref } from 'vue';
 
@@ -17,6 +18,7 @@ const octokit = new Octokit({
       console.log(msg);
     },
   },
+  previews: ['mercy'],
 });
 
 type Project = Parameters<
@@ -28,7 +30,7 @@ type Project = Parameters<
     >['0'],
     null | undefined
   >
->[0]['data'][number];
+>[0]['data'][0];
 
 const profilePic = ref('');
 const projects = ref<Project[]>([]);
@@ -51,9 +53,15 @@ const fetchProjects = async () => {
   octokit.repos
     .listForUser({
       username: 'RayhanHamada',
+      type: 'owner',
+      sort: 'updated',
+
+      per_page: 200,
     })
     .then(res => {
-      projects.value = res.data;
+      projects.value = res.data.filter(repo =>
+        repo.topics?.includes('for-portfolio')
+      );
     })
     .catch(() => {
       if (process.env.NODE_ENV === 'development') {
